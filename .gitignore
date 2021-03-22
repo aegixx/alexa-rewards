@@ -1,3 +1,5 @@
+lambda-fns/*.js
+
 # CDK-specific 
 bin/*.js
 lib/*.js

@@ -1,7 +1,5 @@
 # The Alexa Skill
 
-![arch](img/arch.png)
-
 This is a CDK Pattern to deploy an Alexa Skill backed by a Lambda Function and a DynamoDB Table.
 
 > NB: This is slightly more complicated than the normal patterns because Alexa is an Amazon product as opposed to an AWS one so you need to setup an Amazon Developer Account with permissions to deploy the skill
@@ -25,7 +23,6 @@ Alexa is an Amazon product even though it can be deployed through AWS you still 
   Open the [Developer Account Security Profile](https://developer.amazon.com/loginwithamazon/console/site/lwa/create-security-profile.html) page and feel free to use whatever values you want for the Security Profile Name and Description. The Privacy Notice URL must be a valid URL format but does not need to be a valid URL. Once you create your security profile, navigate to the `Web Settings` tab and add the following as `Allowed Return URLs`:
    - `http://127.0.0.1:9090/cb`
    - `https://s3.amazonaws.com/ask-cli/response_parser.html`
-   ![Security Profile](img/lwa-security-profile.png)
 ### 3. Copy Your `Client Id` and `Client Secret` from the security profile
 Keep these values safe as we will use them in a second.
 ### 4. Make Sure You Have An AWS Account with CLI Access
@@ -47,7 +44,6 @@ Set the following key/values in the request:
 | Client Secret    | {YOUR_CLIENT_SECRET}                                                                                                                  |
 | Scope            | alexa::ask:skills:readwrite alexa::ask:models:readwrite alexa::ask:skills:test alexa::ask:catalogs:read alexa::ask:catalogs:readwrite |
 |                  |                                                                                                                                       |
-![Postman Auth](img/postman-oauth-settings.png)
 
 A Pop-Up should show up prompting you to log into your Developer account. Log in and you will be redirected to Postman where you should have a `refresh_token` to use in the next steps
 
